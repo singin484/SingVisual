@@ -17,13 +17,11 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: setup gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.10'
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
 
       - name: build
-        run: gradle build
+        run: ./gradlew build
 
       - name: capture build artifacts
         uses: actions/upload-artifact@v4
