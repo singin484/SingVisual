@@ -1,6 +1,6 @@
 plugins {
-    id 'fabric-loom' version '1.10.5'
-    id 'maven-publish'
+    id 'fabric-loom' version '1.9.2'
+    // остальные плагины...
 }
 
 version = project.mod_version
